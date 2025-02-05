@@ -42,12 +42,12 @@ function updateReceipt() {
   receiptItems.innerHTML = cart
     .map(
       ({ itemName, price }) =>
-        `<p>Item: ${itemName} - $${price.toFixed(2)}</p>`
+        `<p>Item: ${itemName} - R{price.toFixed(2)}</p>`
     )
     .join('');
   
   // Update total cost
-  totalCostDisplay.innerHTML = `Total Cost: $${totalCost.toFixed(2)}`;
+  totalCostDisplay.innerHTML = `Total Cost: R${totalCost.toFixed(2)}`;
 }
 
 function showReceipt(change) {
@@ -55,14 +55,14 @@ function showReceipt(change) {
   const itemsBought = cart
     .map(
       ({ itemName, price }) =>
-        `<p><strong>${itemName}</strong>: $${price.toFixed(2)}</p>`
+        `<p><strong>${itemName}</strong>: R${price.toFixed(2)}</p>`
     )
     .join('');
   
   receiptContent.innerHTML = itemsBought;
   
   // Show the total cost and the change
-  changeDueDisplay.innerHTML = `Change Due: $${change.toFixed(2)}`;
+  changeDueDisplay.innerHTML = `Change Due: R${change.toFixed(2)}`;
   
   // Display the receipt section
   receiptSection.style.display = 'block';
