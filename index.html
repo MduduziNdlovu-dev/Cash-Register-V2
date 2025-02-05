@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Cash Register</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Interactive Cash Register</h1>
+      <div class="grid-container">
+        <!-- Left Grid: Products -->
+        <section class="products-section">
+          <h2>Products</h2>
+          <div class="product" data-price="10.99">
+            <h3>Product 1</h3>
+            <p>$10.99</p>
+            <button class="add-to-cart">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+          <div class="product" data-price="5.49">
+            <h3>Product 2</h3>
+            <p>$5.49</p>
+            <button class="add-to-cart">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+          <div class="product" data-price="3.29">
+            <h3>Product 3</h3>
+            <p>$3.29</p>
+            <button class="add-to-cart">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+          <div class="product" data-price="8.99">
+            <h3>Product 4</h3>
+            <p>$8.99</p>
+            <button class="add-to-cart">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+          </div>
+        </section>
+
+        <!-- Middle Grid: Cart and Payment Section -->
+        <section class="cart-section">
+          <h2>Your Cart</h2>
+          <div id="receipt-items"></div>
+          <p id="total-cost"></p>
+          <div class="payment-section">
+            <label for="payment">Enter Payment:</label>
+            <input type="number" id="payment" placeholder="Enter Amount" />
+            <button id="pay-btn">Pay</button>
+          </div>
+        </section>
+
+        <!-- Right Grid: Receipt Section -->
+        <section class="receipt-section">
+          <h3>Receipt</h3>
+          <div id="receipt-content"></div>
+          <p id="change-due"></p>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
